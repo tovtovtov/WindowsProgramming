@@ -1,8 +1,8 @@
-﻿// Practice1.cpp : 애플리케이션에 대한 진입점을 정의합니다.
+﻿// Draw_Sample.cpp : 애플리케이션에 대한 진입점을 정의합니다.
 //
 
 #include "framework.h"
-#include "Practice1.h"
+#include "Draw_Sample.h"
 
 #define MAX_LOADSTRING 100
 
@@ -29,7 +29,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     // 전역 문자열을 초기화합니다.
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
-    LoadStringW(hInstance, IDC_PRACTICE1, szWindowClass, MAX_LOADSTRING);
+    LoadStringW(hInstance, IDC_DRAWSAMPLE, szWindowClass, MAX_LOADSTRING);
     MyRegisterClass(hInstance);
 
     // 애플리케이션 초기화를 수행합니다:
@@ -38,7 +38,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         return FALSE;
     }
 
-    HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_PRACTICE1));
+    HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_DRAWSAMPLE));
 
     MSG msg;
 
@@ -73,10 +73,10 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
     wcex.cbClsExtra     = 0;
     wcex.cbWndExtra     = 0;
     wcex.hInstance      = hInstance;
-    wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_PRACTICE1));
+    wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_DRAWSAMPLE));
     wcex.hCursor        = LoadCursor(nullptr, IDC_ARROW);
     wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW+1);
-    wcex.lpszMenuName   = MAKEINTRESOURCEW(IDC_PRACTICE1);
+    wcex.lpszMenuName   = MAKEINTRESOURCEW(IDC_DRAWSAMPLE);
     wcex.lpszClassName  = szWindowClass;
     wcex.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
 
@@ -121,58 +121,74 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //  WM_DESTROY  - 종료 메시지를 게시하고 반환합니다.
 //
 //
-static
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message)
     {
-    /*
-    멀티바이트, wchar, tchar에 대해 알기
-    윈도우 출력 방법 알기
-    */
-    case WM_KEYDOWN: // 키보드 입력 감지 시 문자 출력
+        // 알아두기
+    case WM_CHAR:
     {
-        TCHAR str[10] = _T("");
         HDC hdc = GetDC(hWnd);
-        str[0] = wParam;
-        str[1] = NULL;
-        TextOut(hdc, 100, 20, str, _tcslen(str));
-        ReleaseDC(hWnd, hdc);
-    }break;
-    
-    case WM_COMMAND:
-        {
-            int wmId = LOWORD(wParam);
-            // 메뉴 선택을 구문 분석합니다:
-            switch (wmId)
-            {
-            case IDM_ABOUT:
-                DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
-                break;
-            case IDM_EXIT:
-                DestroyWindow(hWnd);
-                break;
-            default:
-                return DefWindowProc(hWnd, message, wParam, lParam);
-            }
-        }
-        break;
-    case WM_PAINT:
-        {
-            PAINTSTRUCT ps;
-            HDC hdc = BeginPaint(hWnd, &ps);
-            // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
 
-            //Textout(), DrawText() 함수 출력 예시
-            //RECT rect;
-            //rect.left = 10;
-            //rect.right = 100;
-            //rect.top = 10;
-            //rect.bottom = 50;
-            //TextOut(hdc, 50, 50, L"aaaa", _tcslen(L"aaaa"));
-            //DrawText(hdc, _T("i love you"), _tcslen(_T("i love you")), &rect, DT_CENTER);
-            
-            EndPaint(hWnd, &ps);
+
+
+        ReleaseDC(hWnd, hdc);
+
+        //InvalidateRgn(hWnd, NULL, true); // 화면 초기화 및 출력 호출
+    }
+    case WM_COMMAND:
+    {
+        int wmId = LOWORD(wParam);
+        // 메뉴 선택을 구문 분석합니다:
+        switch (wmId)
+        {
+        case IDM_ABOUT:
+            DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
+            break;
+        case IDM_EXIT:
+            DestroyWindow(hWnd);
+            break;
+        default:
+            return DefWindowProc(hWnd, message, wParam, lParam);
+        }
+    }
+    break;
+    case WM_PAINT:
+    {
+        PAINTSTRUCT ps;
+        HDC hdc = BeginPaint(hWnd, &ps);
+        // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
+
+        // 선 옵션 
+        unsigned long col = RGB(255, 0, 0);
+        HPEN pen = CreatePen(PS_DOT, 1, col);
+        HPEN oldpen = (HPEN)SelectObject(hdc, pen);
+
+        DWORD bcol = 0;
+        HBRUSH hbrush = CreateSolidBrush(RGB(128, 0, 0));
+        HPEN oldbrush = (HPEN)SelectObject(hdc, hbrush);
+
+        // 다각형 그리기
+        POINT pos[10] = { {10, 150}, {250, 30}, {500, 150}, {350, 300}, {150, 300} };
+        Polygon(hdc, pos, 5);
+
+        // 사각형 그리기
+        Rectangle(hdc, 100, 100, 10, 10);
+
+        // 원 그리기
+        Ellipse(hdc, 10, 10, 100, 100);
+
+        // 선 그리기
+        MoveToEx(hdc, 10, 10, NULL);
+        LineTo(hdc, 100, 100);
+
+        SelectObject(hdc, oldpen);
+        DeleteObject(pen);
+
+        SelectObject(hdc, oldbrush);
+        DeleteObject(hbrush);
+
+        EndPaint(hWnd, &ps);
         }
         break;
     case WM_DESTROY:
