@@ -1,0 +1,117 @@
+//글자 출력하기
+wchar(), tchar 차이 알기
+WM_KEYDOWN/UP, WM_CHAR 등 특징, 역할, 사용 방법, 대소문자/단순 키 입력 방식 차이
+VK_BACK... 가상키 종류
+static 변수의 사용 이유, 활용
+//InvalidateRgn(hWnd, NULL, true); // 화면 초기화 및 출력 호출
+WndProc, wWindMain 등 소스 코드 기본 제공 구조 알기
+
+=======================================================================================
+
+// 그림 출력하기
+HDC hdc = GetDC(hWnd); // 핸들 생성
+
+ReleaseDC(hWnd, hdc); // 핸들 해제
+
+InvalidateRgn(hWnd, NULL, true); // 화면 초기화 및 출력 호출
+
+// 선 출력
+MoveToEx() 선 시작점 지정
+LineTo() 끝점 지정
+ex)
+MoveToEx(hdc, 10, 10, NULL);
+LineTo(hdc, 100, 100);
+
+// 원 출력
+Ellipse()
+
+// 사각형 출력
+Rectangle()
+
+// 다각형 출력
+Polygon()
+ex)
+POINT pos[10] = { {10, 150}, {250, 30}, {500, 150}, {350, 300}, {150, 300} };
+Polygon(hdc, pos, 5);
+
+// 도형 그리기의 경우 내부도 채워지며 그려짐
+
+// 선 관련 값
+HPEN pen = CreatePen() // 펜 스타일, 굵기, 색상의 새로운 펜 생성
+HPEN oldpen = (HPEN)SelectObject() // 펜 지정
+
+SelectObject(hdc, oldpen); // 복구
+DeleteObject(pen);
+
+// 브러쉬 생성 및 설정(안에 면 채우기)
+DWORD bcol = 0;
+HBRUSH hbrush = CreateSolidBrush(RGB(128, 0, 0));
+HBRUSH oldbrush = (HBRUSH)SelectObject(hdc, hbrush);
+
+SelectObject(hdc, oldbrush); // 복구
+DeleteObject(hbrush);
+
+색상 코드 unsinged long 형태로 선언 / unsinged long col = RGB(255, 0 , 0);
+
+*** 사용 예시 ***
+
+// 선 옵션 
+unsigned long col = RGB(255, 0, 0);
+HPEN pen = CreatePen(PS_DOT, 1, col);
+HPEN oldpen = (HPEN)SelectObject(hdc, pen);
+
+DWORD bcol = 0;
+HBRUSH hbrush = CreateSolidBrush(RGB(128, 0, 0));
+HPEN oldbrush = (HPEN)SelectObject(hdc, hbrush);
+
+
+// 다각형 그리기
+POINT pos[10] = { {10, 150}, {250, 30}, {500, 150}, {350, 300}, {150, 300} };
+Polygon(hdc, pos, 5);
+
+// 사각형 그리기
+Rectangle(hdc, 100, 100, 10, 10);
+
+// 원 그리기
+Ellipse(hdc, 10, 10, 100, 100);
+
+// 선 그리기
+MoveToEx(hdc, 10, 10, NULL);
+LineTo(hdc, 100, 100);
+
+SelectObject(hdc, oldpen);
+DeleteObject(pen);
+
+SelectObject(hdc, oldbrush);
+DeleteObject(hbrush);
+
+=======================================================================================
+
+// 타이머 기능
+// 즉각적인 입력 등에 활용 가능
+// 1초 타이머를 생성하고 토글 신호를 만들며 화면을 다시 그리는 코드
+case WM_CREATE:
+{
+    SetTimer(hWnd, 1, 1000, NULL);
+} break;
+case WM_TIMER:
+{
+    if (wParam == 1)
+    {
+        isflag = !isflag;
+        InvalidateRgn(hWnd, NULL, TRUE);
+    }
+} break;
+
+// 마우스 입력 감지
+
+case WM_MOUSEMOVE: // 마우스 이동
+{
+	x = LOWORD(lParam);
+	y = HIWORD(lParam);
+} break;
+
+case WM_RBUTTONDOWN: // 마우스 우측 버튼 다운 감지
+{
+
+} break;

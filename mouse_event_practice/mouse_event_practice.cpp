@@ -1,8 +1,8 @@
-﻿// Draw_Sample.cpp : 애플리케이션에 대한 진입점을 정의합니다.
+﻿// mouse_event_practice.cpp : 애플리케이션에 대한 진입점을 정의합니다.
 //
 
 #include "framework.h"
-#include "Draw_Sample.h"
+#include "mouse_event_practice.h"
 
 #define MAX_LOADSTRING 100
 
@@ -29,7 +29,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     // 전역 문자열을 초기화합니다.
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
-    LoadStringW(hInstance, IDC_DRAWSAMPLE, szWindowClass, MAX_LOADSTRING);
+    LoadStringW(hInstance, IDC_MOUSEEVENTPRACTICE, szWindowClass, MAX_LOADSTRING);
     MyRegisterClass(hInstance);
 
     // 애플리케이션 초기화를 수행합니다:
@@ -38,7 +38,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         return FALSE;
     }
 
-    HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_DRAWSAMPLE));
+    HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_MOUSEEVENTPRACTICE));
 
     MSG msg;
 
@@ -73,10 +73,10 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
     wcex.cbClsExtra     = 0;
     wcex.cbWndExtra     = 0;
     wcex.hInstance      = hInstance;
-    wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_DRAWSAMPLE));
+    wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_MOUSEEVENTPRACTICE));
     wcex.hCursor        = LoadCursor(nullptr, IDC_ARROW);
     wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW+1);
-    wcex.lpszMenuName   = MAKEINTRESOURCEW(IDC_DRAWSAMPLE);
+    wcex.lpszMenuName   = MAKEINTRESOURCEW(IDC_MOUSEEVENTPRACTICE);
     wcex.lpszClassName  = szWindowClass;
     wcex.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
 
@@ -121,122 +121,67 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //  WM_DESTROY  - 종료 메시지를 게시하고 반환합니다.
 //
 //
-
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-    static int x = 0;
-    static int y = 0;
-    static int isflag = 0;
-    static RECT rectView;
+    static int x, y;
+    static BOOL Selection;
+    static int mx, my;
 
     switch (message)
     {
-    case WM_MOUSEMOVE:
-    {
-        int x = HIWORD(lParam);
-        int y = LOWORD(lParam);
-
-        // 좌표값 표시
-        TCHAR buf[50] = _T("");
-        wsprintf(buf, _T("%d, %d"), x, y);
-        HDC hdc = GetDC(hWnd);
-        TextOut(hdc, 450, 50, buf, lstrlen(buf));
-        
-    } break;
     case WM_CREATE:
     {
-        SetTimer(hWnd, 1, 1000, NULL);
+        Selection = FALSE;
+
     } break;
-    case WM_TIMER:
+    case WM_MOUSEMOVE:
     {
-        if (wParam == 1)
-        {
-            isflag = !isflag;
-            InvalidateRgn(hWnd, NULL, TRUE);
-        }
-    } break;
-        // 알아두기
-    case WM_CHAR:
-    {
-        HDC hdc = GetDC(hWnd);
-
-
-
-        ReleaseDC(hWnd, hdc);
-
-        //InvalidateRgn(hWnd, NULL, true); // 화면 초기화 및 출력 호출
-    }
-    case WM_COMMAND:
-    {
-        int wmId = LOWORD(wParam);
-        // 메뉴 선택을 구문 분석합니다:
-        switch (wmId)
-        {
-        case IDM_ABOUT:
-            DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
-            break;
-        case IDM_EXIT:
-            DestroyWindow(hWnd);
-            break;
-        default:
-            return DefWindowProc(hWnd, message, wParam, lParam);
-        }
-    }
-    break;
-    case WM_KEYDOWN:
-    {
-        if (wParam == VK_RIGHT)
-        {
-            x += 10;
-        }
-        else if (wParam == VK_LEFT)
-        {
-            x -= 10;
-        }
-        else if (wParam == VK_UP)
-        {
-            y -= 10;
-        }
-        else if (wParam == VK_DOWN)
-        {
-            y += 10;
-        }
-
+        mx = LOWORD(lParam);
+        my = HIWORD(lParam);
         InvalidateRgn(hWnd, NULL, TRUE);
-    }
+    } break;
+    case WM_LBUTTONDOWN:
+    {
+        Selection = TRUE;
+        x = mx;
+        y = my;
+        InvalidateRgn(hWnd, NULL, TRUE);
+    } break;
+    case WM_LBUTTONUP:
+    {
+        Selection = FALSE;
+        InvalidateRgn(hWnd, NULL, TRUE);
+    } break;
+
+    case WM_COMMAND:
+        {
+            int wmId = LOWORD(wParam);
+            // 메뉴 선택을 구문 분석합니다:
+            switch (wmId)
+            {
+            case IDM_ABOUT:
+                DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
+                break;
+            case IDM_EXIT:
+                DestroyWindow(hWnd);
+                break;
+            default:
+                return DefWindowProc(hWnd, message, wParam, lParam);
+            }
+        }
         break;
     case WM_PAINT:
-    {
-        PAINTSTRUCT ps;
-        HDC hdc = BeginPaint(hWnd, &ps);
-        // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
-
-        HBRUSH hbrush = CreateSolidBrush(RGB(255, 0, 0));
-        HBRUSH oldbrush = NULL;
-
-        // 키 입력 감지 시 색칠
-        if (isflag)
         {
-            oldbrush = (HBRUSH)SelectObject(hdc, hbrush);
+            PAINTSTRUCT ps;
+            HDC hdc = BeginPaint(hWnd, &ps);
+            // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
+
+            Ellipse(hdc, 20, 20, 40, 40);
+
+            EndPaint(hWnd, &ps);
         }
-        else
-        {
-            oldbrush = (HBRUSH)SelectObject(hdc, GetStockObject(WHITE_BRUSH));
-        }
-        
-
-        Ellipse(hdc, 20 + x, 20 + y, 80 + x, 80 + y);
-
-        SelectObject(hdc, oldbrush); // 복구
-        DeleteObject(hbrush);
-
-        
-
-        EndPaint(hWnd, &ps);
-    }
         break;
     case WM_DESTROY:
-        KillTimer(hWnd, 1);
         PostQuitMessage(0);
         break;
     default:
