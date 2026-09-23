@@ -115,3 +115,128 @@ case WM_RBUTTONDOWN: // 마우스 우측 버튼 다운 감지
 {
 
 } break;
+
+========================================================================================
+
+// 리소스 추가 및 변경
+
+리소스 - 추가 - 리소스 선택
+
+## 메뉴 리로스 추가 및 변경
+- .rc 파일에 저장, .h 파일에 define문으로 키 자동 생성
+
+ATOM MyRegisterClass(HINSTANCE hInstance)
+{
+    WNDCLASSEXW wcex;
+
+    wcex.cbSize = sizeof(WNDCLASSEX);
+
+    wcex.style          = CS_HREDRAW | CS_VREDRAW;
+    wcex.lpfnWndProc    = WndProc;
+    wcex.cbClsExtra     = 0;
+    wcex.cbWndExtra     = 0;
+    wcex.hInstance      = hInstance;
+    wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_RESOURCEPRACTICE));
+    wcex.hCursor        = LoadCursor(nullptr, IDC_ARROW);
+    wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW+1);
+	
+    wcex.lpszMenuName   = MAKEINTRESOURCEW(IDC_RESOURCEPRACTICE); // 알아낸 키 이름으로 바꾸면 생성한 메뉴 리소스로 변경
+	
+    wcex.lpszClassName  = szWindowClass;
+    wcex.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
+
+    return RegisterClassExW(&wcex);
+}
+// 헤더 파일이 이상하면 프로그램 저장 후 다시 실행
+// 메뉴의 함수 구현은 winProc에서 구현
+
+MessageBox();
+
+ex)
+ MessageBox(hWnd,
+     _T("새 파일을 여시겠습니까?"), // 창 내부 내용
+     _T("새 파일 선택"), // caption 창 상단
+     MB_OKCANCEL); // 메시지 박스 버튼 등의 옵션
+
+// 메뉴 리소스 동작 구현 예시
+// 리소스 .rc에서 수정한 이름으로 case 구분
+// MessageBox를 이용해 표시
+
+	 int wmId = LOWORD(wParam);
+ // 메뉴 선택을 구문 분석합니다:
+ switch (wmId)
+ {
+ case ID_FILE_NEW:
+ {
+     OutputDebugString(_T("새로운 파일 호출\n"));
+     int msgResult = MessageBox(hWnd,
+         _T("새 파일을 여시겠습니까?"),
+         _T("새 파일 선택"),
+         MB_YESNOCANCEL); // 메시지 박스에 표시할 버튼 종류
+
+     if (msgResult == IDCANCEL) // 메시지 박스에 표시된 버튼 선택 시 해당 값
+     {
+         OutputDebugString(_T("새로운 파일 호출 중...\n"));
+     }
+ } break;
+ case ID_FILE_OPEN:
+ {
+     OutputDebugString(_T("파일 열기"));
+ } break;
+ case ID_EXIT:
+ {
+     int answer = MessageBox(hWnd,
+         _T("파일을 저장하고 끝내겠습니까?"),
+         _T("끝내기 선택"),
+         MB_YESNOCANCEL);
+     if (answer == IDYES || answer == IDNO)
+     {
+         PostQuitMessage(0);
+     }
+ }break;
+ default:
+     return DefWindowProc(hWnd, message, wParam, lParam);
+ }
+ 
+ // 파일 탐색기 호출 함수
+ void FileOpenDialog(HWND hWnd) // 메뉴 선택 시 호출될 함수 선언
+{
+    OPENFILENAME OFN;
+    memset(&OFN, 0, sizeof(OPENFILENAME));
+    TCHAR lpstrFile[256] = _T(""); // 파일 주소 텍스트 출력 크기
+	TCHAR filter[] = _T("Every file(*.*)\0 *.*\0Text file\0*.txt;*.doc\0"); // 파일 종류 필터 설정, 정규표현식 참고
+
+    OFN.lStructSize = sizeof(OPENFILENAME);
+    OFN.hwndOwner = hWnd;
+    OFN.lpstrFile = lpstrFile;
+    OFN.nMaxFile = 100;
+    OFN.lpstrInitialDir = _T("."); // 파일 위치 지정 .  ../  등
+	OFN.lpstrFilter = filter;
+
+    if(GetOpenFileName(&OFN))
+    {
+        MessageBox(hWnd, OFN.lpstrFile, _T("열기선택파일"), MB_OK);
+    }
+}
+
+// 색상 선택 창 표시 및 선택된 색 반환 함수
+COLORREF g_SelectColor;
+void OpenColorPicker(HWND hWnd)
+{
+    CHOOSECOLOR COLOR;
+    static COLORREF tmp[16], color;
+    HBRUSH hBrush, OldBrush;
+    
+    for (int i = 0; i < 16; i++)
+        tmp[i] = RGB(rand() % 256, rand() % 256, rand() % 256);
+    memset(&COLOR, 0, sizeof(CHOOSECOLOR));
+    COLOR.lStructSize = sizeof(CHOOSECOLOR);
+    COLOR.hwndOwner = hWnd;
+    COLOR.lpCustColors = tmp;
+    COLOR.Flags = CC_RGBINIT;
+    if (ChooseColor(&COLOR) != 0)
+    {
+        g_SelectColor = COLOR.rgbResult;
+        InvalidateRgn(hWnd, NULL, true);
+    }
+}
