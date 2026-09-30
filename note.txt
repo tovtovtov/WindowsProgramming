@@ -13,7 +13,21 @@ HDC hdc = GetDC(hWnd); // 핸들 생성
 
 ReleaseDC(hWnd, hdc); // 핸들 해제
 
-InvalidateRgn(hWnd, NULL, true); // 화면 초기화 및 출력 호출
+InvalidateRgn(hWnd, NULL, true); // 화면 초기화 및 출력(WM_PAINT 구역) 호출
+
+// 두 좌표 사이의 거리 값 구하기
+double LengthPts(int x1, int y1, int x2, int y2)
+{
+    return(sqrt((float)((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))));
+}
+
+// 원 충돌 감지(앞서 비교한 좌표간의 거리가 원이 반지름보다 작을 시 충돌 감지)
+BOOL InCircle(int x, int y, int mx, int my)
+{
+    if (LengthPts(x, y, mx, my) < SIZE) return TRUE;
+    else return FALSE;
+}
+
 
 // 선 출력
 MoveToEx() 선 시작점 지정

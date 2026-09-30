@@ -4,6 +4,7 @@
 #include "framework.h"
 #include "Resource_Practice.h"
 #include "commdlg.h"
+#include <math.h>
 
 #define MAX_LOADSTRING 100
 
@@ -158,7 +159,7 @@ void FileOpenDialog(HWND hWnd)
     OFN.lpstrInitialDir = _T(".");
     OFN.lpstrFilter = filter;
 
-    if(GetOpenFileName(&OFN))
+    if (GetOpenFileName(&OFN))
     {
         TCHAR filenamestr[256] = _T("");
         _stprintf_s(filenamestr, _T("%d"), 123);
@@ -169,6 +170,8 @@ void FileOpenDialog(HWND hWnd)
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
+    
+    static HMENU hmwnu, hsubmenu;
     switch (message)
     {
     case WM_COMMAND:
@@ -177,6 +180,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         // 메뉴 선택을 구문 분석합니다:
         switch (wmId)
         {
+        case ID_COPY:
+        {
+
+        } break;
         case ID_FILE_NEW:
         {
             OutputDebugString(_T("새로운 파일 호출\n"));
@@ -234,11 +241,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
         COLORREF ellipseCol = g_SelectColor;
 
-        HBRUSH brush = CreateSolidBrush(g_SelectColor);
+        HBRUSH brush = CreateSolidBrush(RGB(255, 0, 0));
         HBRUSH oldbrush = (HBRUSH)SelectObject(hdc, brush);
 
-        Ellipse(hdc, 20, 20, 120, 120);
+        Ellipse(hdc, x - SIZE, y - SIZE, x + SIZE, y + SIZE);
 
+        
 
         SelectObject(hdc, oldbrush);
         DeleteObject(brush);
