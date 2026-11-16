@@ -1,0 +1,781 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\1장">
+      <UniqueIdentifier>{68127bcf-31a2-43e8-9da2-9403a674cbfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\2장">
+      <UniqueIdentifier>{11bb6be7-20ee-4f66-96cd-11d70c7cf81b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\3장">
+      <UniqueIdentifier>{aeadeea1-8ce5-4aa3-8786-aabcfc9c87e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\4장">
+      <UniqueIdentifier>{2c16e99f-e916-4db4-a9bf-e01234808a88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\5장">
+      <UniqueIdentifier>{5bf681fd-5095-4f79-8ac1-7f38e47b8f9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\6장">
+      <UniqueIdentifier>{d60ad008-78e3-4b8d-bcf6-67bf44b7b74b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\2장\연습">
+      <UniqueIdentifier>{012002bc-2864-48ca-84a0-6c4d6fb339b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\3장\연습">
+      <UniqueIdentifier>{74280e58-13de-4d5d-ab93-ac35ade128d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\4장\연습">
+      <UniqueIdentifier>{f5db4159-a4c5-41c7-8eaf-81ae190cbdd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\5장\연습">
+      <UniqueIdentifier>{aefdbd0d-3d41-459e-8905-3c9097daa572}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\6장\연습">
+      <UniqueIdentifier>{310c5e16-06cb-45ca-9fdd-938db6889318}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\7장">
+      <UniqueIdentifier>{0c4c68c4-4757-4bfa-8784-c7db111b548a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\8장">
+      <UniqueIdentifier>{e7b353ae-8113-4bdf-94fc-bdbe5ae369f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\9장">
+      <UniqueIdentifier>{ef91ae10-dcb3-44fe-ac48-96a4363336de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\10장">
+      <UniqueIdentifier>{9a9fbbbf-b5d0-47f1-add6-6739f17067c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\7장\연습">
+      <UniqueIdentifier>{50ae1025-8a3d-4455-b643-30383044db87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\8장\연습">
+      <UniqueIdentifier>{7cad3a3c-e68c-49e5-9228-005ee86fa6f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\9장\연습">
+      <UniqueIdentifier>{bbe3deda-f153-4085-8f78-52c5301bbce0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\10장\연습">
+      <UniqueIdentifier>{3a599a2d-7837-4f39-9096-8f37f57cead5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\1장\연습">
+      <UniqueIdentifier>{54a6bc2c-c548-43a6-a0b3-055fa8d16ddf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="1장 실습문제\실습1-01.cpp">
+      <Filter>소스 파일\1장</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 실습문제\실습2-02.cpp">
+      <Filter>소스 파일\2장</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 실습문제\실습2-03.cpp">
+      <Filter>소스 파일\2장</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 실습문제\실습2-04.cpp">
+      <Filter>소스 파일\2장</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 실습문제\실습2-05.cpp">
+      <Filter>소스 파일\2장</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 실습문제\실습2-06.cpp">
+      <Filter>소스 파일\2장</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 실습문제\실습2-07.cpp">
+      <Filter>소스 파일\2장</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 실습문제\실습2-08.cpp">
+      <Filter>소스 파일\2장</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 실습문제\실습2-09.cpp">
+      <Filter>소스 파일\2장</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 실습문제\실습2-10.cpp">
+      <Filter>소스 파일\2장</Filter>
+    </ClCompile>
+    <ClCompile Include="3장 실습문제\실습3-01.cpp">
+      <Filter>소스 파일\3장</Filter>
+    </ClCompile>
+    <ClCompile Include="3장 실습문제\실습3-02.cpp">
+      <Filter>소스 파일\3장</Filter>
+    </ClCompile>
+    <ClCompile Include="4장 실습문제\실습4-02.cpp">
+      <Filter>소스 파일\4장</Filter>
+    </ClCompile>
+    <ClCompile Include="4장 실습문제\실습4-03.cpp">
+      <Filter>소스 파일\4장</Filter>
+    </ClCompile>
+    <ClCompile Include="4장 실습문제\실습4-04 - 복사본.cpp">
+      <Filter>소스 파일\4장</Filter>
+    </ClCompile>
+    <ClCompile Include="4장 실습문제\실습4-04.cpp">
+      <Filter>소스 파일\4장</Filter>
+    </ClCompile>
+    <ClCompile Include="5장 실습문제\실습5-01.cpp">
+      <Filter>소스 파일\5장</Filter>
+    </ClCompile>
+    <ClCompile Include="5장 실습문제\실습5-02.cpp">
+      <Filter>소스 파일\5장</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 실습문제\실습6-01.cpp">
+      <Filter>소스 파일\6장</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 실습문제\실습6-02.cpp">
+      <Filter>소스 파일\6장</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 실습문제\실습6-03.cpp">
+      <Filter>소스 파일\6장</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 실습문제\실습6-04.cpp">
+      <Filter>소스 파일\6장</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 실습문제\실습6-05.cpp">
+      <Filter>소스 파일\6장</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 실습문제\실습6-06.cpp">
+      <Filter>소스 파일\6장</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 실습문제\실습6-07.cpp">
+      <Filter>소스 파일\6장</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 실습문제\실습6-08.cpp">
+      <Filter>소스 파일\6장</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 실습문제\실습6-09.cpp">
+      <Filter>소스 파일\6장</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 실습문제\실습6-10.cpp">
+      <Filter>소스 파일\6장</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 실습문제\실습6-11.cpp">
+      <Filter>소스 파일\6장</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 실습문제\실습6-12.cpp">
+      <Filter>소스 파일\6장</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 실습문제\실습6-13.cpp">
+      <Filter>소스 파일\6장</Filter>
+    </ClCompile>
+    <ClCompile Include="7장 실습문제\실습7-01.cpp">
+      <Filter>소스 파일\7장</Filter>
+    </ClCompile>
+    <ClCompile Include="7장 실습문제\실습7-02.cpp">
+      <Filter>소스 파일\7장</Filter>
+    </ClCompile>
+    <ClCompile Include="7장 실습문제\실습7-03.cpp">
+      <Filter>소스 파일\7장</Filter>
+    </ClCompile>
+    <ClCompile Include="7장 실습문제\실습7-04.cpp">
+      <Filter>소스 파일\7장</Filter>
+    </ClCompile>
+    <ClCompile Include="7장 실습문제\실습7-05.cpp">
+      <Filter>소스 파일\7장</Filter>
+    </ClCompile>
+    <ClCompile Include="7장 실습문제\실습7-06.cpp">
+      <Filter>소스 파일\7장</Filter>
+    </ClCompile>
+    <ClCompile Include="7장 실습문제\실습7-07.cpp">
+      <Filter>소스 파일\7장</Filter>
+    </ClCompile>
+    <ClCompile Include="7장 실습문제\실습7-08.cpp">
+      <Filter>소스 파일\7장</Filter>
+    </ClCompile>
+    <ClCompile Include="7장 실습문제\실습7-09.cpp">
+      <Filter>소스 파일\7장</Filter>
+    </ClCompile>
+    <ClCompile Include="7장 실습문제\실습7-10.cpp">
+      <Filter>소스 파일\7장</Filter>
+    </ClCompile>
+    <ClCompile Include="8장 실습문제\실습8-01.cpp">
+      <Filter>소스 파일\8장</Filter>
+    </ClCompile>
+    <ClCompile Include="8장 실습문제\실습8-02.cpp">
+      <Filter>소스 파일\8장</Filter>
+    </ClCompile>
+    <ClCompile Include="8장 실습문제\실습8-03.cpp">
+      <Filter>소스 파일\8장</Filter>
+    </ClCompile>
+    <ClCompile Include="8장 실습문제\실습8-04.cpp">
+      <Filter>소스 파일\8장</Filter>
+    </ClCompile>
+    <ClCompile Include="8장 실습문제\실습8-05.cpp">
+      <Filter>소스 파일\8장</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 실습문제\실습9-01-C.cpp">
+      <Filter>소스 파일\9장</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 실습문제\실습9-01-S.cpp">
+      <Filter>소스 파일\9장</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 실습문제\실습9-02-C.cpp">
+      <Filter>소스 파일\9장</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 실습문제\실습9-02-S.cpp">
+      <Filter>소스 파일\9장</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 실습문제\실습9-03-C.cpp">
+      <Filter>소스 파일\9장</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 실습문제\실습9-03-S.cpp">
+      <Filter>소스 파일\9장</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 실습문제\실습9-04-C.cpp">
+      <Filter>소스 파일\9장</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 실습문제\실습9-04-S.cpp">
+      <Filter>소스 파일\9장</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 실습문제\실습9-05-C.cpp">
+      <Filter>소스 파일\9장</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 실습문제\실습9-05-S.cpp">
+      <Filter>소스 파일\9장</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 실습문제\실습9-06-C.cpp">
+      <Filter>소스 파일\9장</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 실습문제\실습9-06-S.cpp">
+      <Filter>소스 파일\9장</Filter>
+    </ClCompile>
+    <ClCompile Include="10장 실습문제\실습10-01.cpp">
+      <Filter>소스 파일\10장</Filter>
+    </ClCompile>
+    <ClCompile Include="10장 실습문제\실습10-02.cpp">
+      <Filter>소스 파일\10장</Filter>
+    </ClCompile>
+    <ClCompile Include="10장 실습문제\실습10-03.cpp">
+      <Filter>소스 파일\10장</Filter>
+    </ClCompile>
+    <ClCompile Include="10장 실습문제\실습10-04.cpp">
+      <Filter>소스 파일\10장</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 연습문제\연습2-01a.cpp">
+      <Filter>소스 파일\2장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 연습문제\연습2-01b.cpp">
+      <Filter>소스 파일\2장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="3장 연습문제\연습3-01.cpp">
+      <Filter>소스 파일\3장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="3장 연습문제\연습3-02.cpp">
+      <Filter>소스 파일\3장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="3장 연습문제\연습3-03.cpp">
+      <Filter>소스 파일\3장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="3장 연습문제\연습3-04.cpp">
+      <Filter>소스 파일\3장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="3장 연습문제\연습3-05.cpp">
+      <Filter>소스 파일\3장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="3장 연습문제\연습3-06.cpp">
+      <Filter>소스 파일\3장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="3장 연습문제\연습3-07.cpp">
+      <Filter>소스 파일\3장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="3장 연습문제\연습3-08.cpp">
+      <Filter>소스 파일\3장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="3장 연습문제\연습3-09.cpp">
+      <Filter>소스 파일\3장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="3장 연습문제\연습3-10.cpp">
+      <Filter>소스 파일\3장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="3장 연습문제\연습3-11.cpp">
+      <Filter>소스 파일\3장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="3장 연습문제\연습3-12.cpp">
+      <Filter>소스 파일\3장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="4장 연습문제\연습4-01.cpp">
+      <Filter>소스 파일\4장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="5장 연습문제\연습5-01.cpp">
+      <Filter>소스 파일\5장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="5장 연습문제\연습5-02.cpp">
+      <Filter>소스 파일\5장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="5장 연습문제\연습5-03.cpp">
+      <Filter>소스 파일\5장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="5장 연습문제\연습5-04.cpp">
+      <Filter>소스 파일\5장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="5장 연습문제\연습5-05.cpp">
+      <Filter>소스 파일\5장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="5장 연습문제\연습5-06.cpp">
+      <Filter>소스 파일\5장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="5장 연습문제\연습5-07.cpp">
+      <Filter>소스 파일\5장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="5장 연습문제\연습5-08.cpp">
+      <Filter>소스 파일\5장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="5장 연습문제\연습5-09.cpp">
+      <Filter>소스 파일\5장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="5장 연습문제\연습5-10.cpp">
+      <Filter>소스 파일\5장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 연습문제\연습6-01.cpp">
+      <Filter>소스 파일\6장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 연습문제\연습6-02.cpp">
+      <Filter>소스 파일\6장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 연습문제\연습6-03.cpp">
+      <Filter>소스 파일\6장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 연습문제\연습6-04.cpp">
+      <Filter>소스 파일\6장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 연습문제\연습6-05.cpp">
+      <Filter>소스 파일\6장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 연습문제\연습6-06.cpp">
+      <Filter>소스 파일\6장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 연습문제\연습6-07.cpp">
+      <Filter>소스 파일\6장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 연습문제\연습6-08.cpp">
+      <Filter>소스 파일\6장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 연습문제\연습6-09.cpp">
+      <Filter>소스 파일\6장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 연습문제\연습6-10.cpp">
+      <Filter>소스 파일\6장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="7장 연습문제\연습7-01.cpp">
+      <Filter>소스 파일\7장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="7장 연습문제\연습7-02.cpp">
+      <Filter>소스 파일\7장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="7장 연습문제\연습7-03.cpp">
+      <Filter>소스 파일\7장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="7장 연습문제\연습7-04.cpp">
+      <Filter>소스 파일\7장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="7장 연습문제\연습7-05.cpp">
+      <Filter>소스 파일\7장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="7장 연습문제\연습7-06.cpp">
+      <Filter>소스 파일\7장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="7장 연습문제\연습7-07.cpp">
+      <Filter>소스 파일\7장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="7장 연습문제\연습7-08.cpp">
+      <Filter>소스 파일\7장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="7장 연습문제\연습7-09.cpp">
+      <Filter>소스 파일\7장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="7장 연습문제\연습7-10.cpp">
+      <Filter>소스 파일\7장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="7장 연습문제\연습7-11.cpp">
+      <Filter>소스 파일\7장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 연습문제\연습9-01-C.cpp">
+      <Filter>소스 파일\9장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 연습문제\연습9-01-S.cpp">
+      <Filter>소스 파일\9장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 연습문제\연습9-02-C.cpp">
+      <Filter>소스 파일\9장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 연습문제\연습9-02-S.cpp">
+      <Filter>소스 파일\9장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 연습문제\연습9-03-C.cpp">
+      <Filter>소스 파일\9장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 연습문제\연습9-03-S.cpp">
+      <Filter>소스 파일\9장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 연습문제\연습9-04-C.cpp">
+      <Filter>소스 파일\9장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 연습문제\연습9-04-S.cpp">
+      <Filter>소스 파일\9장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 연습문제\연습9-05-C.cpp">
+      <Filter>소스 파일\9장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 연습문제\연습9-05-S.cpp">
+      <Filter>소스 파일\9장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 연습문제\연습9-06-C.cpp">
+      <Filter>소스 파일\9장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 연습문제\연습9-06-S.cpp">
+      <Filter>소스 파일\9장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 연습문제\연습9-07-C.cpp">
+      <Filter>소스 파일\9장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 연습문제\연습9-07-S.cpp">
+      <Filter>소스 파일\9장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 연습문제\연습9-08-C.cpp">
+      <Filter>소스 파일\9장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 연습문제\연습9-08-S.cpp">
+      <Filter>소스 파일\9장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="9장 연습문제\연습9-09.cpp">
+      <Filter>소스 파일\9장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="8장 연습문제\연습8-01.cpp">
+      <Filter>소스 파일\8장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="8장 연습문제\연습8-02.cpp">
+      <Filter>소스 파일\8장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="8장 연습문제\연습8-03.cpp">
+      <Filter>소스 파일\8장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="8장 연습문제\연습8-04.cpp">
+      <Filter>소스 파일\8장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="8장 연습문제\연습8-05.cpp">
+      <Filter>소스 파일\8장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="8장 연습문제\연습8-06.cpp">
+      <Filter>소스 파일\8장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="8장 연습문제\연습8-07.cpp">
+      <Filter>소스 파일\8장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="8장 연습문제\연습8-08.cpp">
+      <Filter>소스 파일\8장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="10장 연습문제\연습10-01.cpp">
+      <Filter>소스 파일\10장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="10장 연습문제\연습10-02.cpp">
+      <Filter>소스 파일\10장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="10장 연습문제\연습10-03.cpp">
+      <Filter>소스 파일\10장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="10장 연습문제\연습10-04.cpp">
+      <Filter>소스 파일\10장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="10장 연습문제\연습10-05.cpp">
+      <Filter>소스 파일\10장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="10장 연습문제\연습10-06.cpp">
+      <Filter>소스 파일\10장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="5장 실습문제\실습5-03.cpp">
+      <Filter>소스 파일\5장</Filter>
+    </ClCompile>
+    <ClCompile Include="5장 실습문제\실습5-04.cpp">
+      <Filter>소스 파일\5장</Filter>
+    </ClCompile>
+    <ClCompile Include="5장 실습문제\실습5-05.cpp">
+      <Filter>소스 파일\5장</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 실습문제\실습2-11.cpp">
+      <Filter>소스 파일\2장</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 실습문제\실습2-12.cpp">
+      <Filter>소스 파일\2장</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 실습문제\실습2-13.cpp">
+      <Filter>소스 파일\2장</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 실습문제\실습2-14.cpp">
+      <Filter>소스 파일\2장</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 실습문제\실습2-15.cpp">
+      <Filter>소스 파일\2장</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 실습문제\실습2-16.cpp">
+      <Filter>소스 파일\2장</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 실습문제\실습2-17.cpp">
+      <Filter>소스 파일\2장</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 실습문제\실습2-18.cpp">
+      <Filter>소스 파일\2장</Filter>
+    </ClCompile>
+    <ClCompile Include="5장 실습문제\실습5-06.cpp">
+      <Filter>소스 파일\5장</Filter>
+    </ClCompile>
+    <ClCompile Include="5장 실습문제\실습5-07.cpp">
+      <Filter>소스 파일\5장</Filter>
+    </ClCompile>
+    <ClCompile Include="5장 연습문제\연습5-11.cpp">
+      <Filter>소스 파일\5장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 연습문제\연습2-02.cpp">
+      <Filter>소스 파일\2장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 연습문제\연습2-03.cpp">
+      <Filter>소스 파일\2장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 연습문제\연습2-04.cpp">
+      <Filter>소스 파일\2장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 연습문제\연습2-05.cpp">
+      <Filter>소스 파일\2장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 연습문제\연습2-06.cpp">
+      <Filter>소스 파일\2장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 연습문제\연습2-07.cpp">
+      <Filter>소스 파일\2장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 연습문제\연습2-08.cpp">
+      <Filter>소스 파일\2장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="2장 연습문제\연습2-09.cpp">
+      <Filter>소스 파일\2장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="3장 실습문제\실습3-03.cpp">
+      <Filter>소스 파일\3장</Filter>
+    </ClCompile>
+    <ClCompile Include="3장 실습문제\실습3-04.cpp">
+      <Filter>소스 파일\3장</Filter>
+    </ClCompile>
+    <ClCompile Include="3장 실습문제\실습3-05.cpp">
+      <Filter>소스 파일\3장</Filter>
+    </ClCompile>
+    <ClCompile Include="3장 실습문제\실습3-06.cpp">
+      <Filter>소스 파일\3장</Filter>
+    </ClCompile>
+    <ClCompile Include="3장 실습문제\실습3-07.cpp">
+      <Filter>소스 파일\3장</Filter>
+    </ClCompile>
+    <ClCompile Include="3장 실습문제\실습3-08.cpp">
+      <Filter>소스 파일\3장</Filter>
+    </ClCompile>
+    <ClCompile Include="3장 연습문제\연습3-13.cpp">
+      <Filter>소스 파일\3장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="5장 연습문제\연습5-12.cpp">
+      <Filter>소스 파일\5장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="5장 연습문제\연습5-13.cpp">
+      <Filter>소스 파일\5장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 연습문제\연습6-11.cpp">
+      <Filter>소스 파일\6장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="6장 연습문제\연습6-12.cpp">
+      <Filter>소스 파일\6장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="1장 연습문제\연습1-1.cpp">
+      <Filter>소스 파일\1장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="1장 연습문제\연습1-2.cpp">
+      <Filter>소스 파일\1장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="4장 실습문제\실습4-05.cpp">
+      <Filter>소스 파일\4장</Filter>
+    </ClCompile>
+    <ClCompile Include="4장 실습문제\실습4-06.cpp">
+      <Filter>소스 파일\4장</Filter>
+    </ClCompile>
+    <ClCompile Include="4장 실습문제\실습4-07.cpp">
+      <Filter>소스 파일\4장</Filter>
+    </ClCompile>
+    <ClCompile Include="4장 실습문제\실습4-08.cpp">
+      <Filter>소스 파일\4장</Filter>
+    </ClCompile>
+    <ClCompile Include="4장 실습문제\실습4-09.cpp">
+      <Filter>소스 파일\4장</Filter>
+    </ClCompile>
+    <ClCompile Include="4장 실습문제\실습4-10.cpp">
+      <Filter>소스 파일\4장</Filter>
+    </ClCompile>
+    <ClCompile Include="4장 연습문제\연습4-02.cpp">
+      <Filter>소스 파일\4장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="4장 연습문제\연습4-03.cpp">
+      <Filter>소스 파일\4장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="4장 연습문제\연습4-04.cpp">
+      <Filter>소스 파일\4장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="4장 연습문제\연습4-05.cpp">
+      <Filter>소스 파일\4장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="4장 연습문제\연습4-06.cpp">
+      <Filter>소스 파일\4장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="4장 연습문제\연습4-07.cpp">
+      <Filter>소스 파일\4장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="4장 연습문제\연습4-08.cpp">
+      <Filter>소스 파일\4장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="4장 연습문제\연습4-09.cpp">
+      <Filter>소스 파일\4장\연습</Filter>
+    </ClCompile>
+    <ClCompile Include="4장 연습문제\연습4-10.cpp">
+      <Filter>소스 파일\4장\연습</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="API.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="bitmap1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="bitmap3.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="연습문제그림\연습5-03.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="연습문제그림\연습5-04.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="연습문제그림\연습5-05-1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="연습문제그림\연습5-05-2.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="연습문제그림\연습5-05-3.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="연습문제그림\연습5-05-4.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="연습문제그림\연습5-08.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="연습문제그림\연습5-10-1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="연습문제그림\연습5-10-2.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="연습문제그림\bitmap_e.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="연습문제그림\연습5-09.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="연습문제그림\bmp00001.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\boy-a.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\boy-b.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\boy-c.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\boy-d.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\boy-e.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\house.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="연습문제그림\bitmap1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\run00.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\run01.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\run02.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\run03.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\run04.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\run05.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\run06.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\run07.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\run08.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\run09.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\mask00.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\mask01.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\mask02.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\mask03.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\mask04.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\mask05.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\mask06.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\mask07.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\mask08.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5장 실습문제\mask09.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
