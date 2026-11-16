@@ -35,5 +35,7 @@ public:
 	void GenerateMaze(int width, int height, MazeDifficulty diff, unsigned int seed);
 	
 	void Render(HDC hdc, ResourceManager* resource);
+
+	bool IsWalkable(int x, int y);
 };
 

@@ -112,6 +112,10 @@ void Map::GenerateMaze(
     unsigned int seed
 )
 {
+    m_mapData.clear();
+    m_width = 0;
+    m_height = 0;
+
     // 홀수 크기인지 확인
     if (width < 3 || height < 3 ||
         width % 2 == 0 || height % 2 == 0)
@@ -140,6 +144,9 @@ void Map::GenerateMaze(
 
 void Map::Render(HDC hdc, ResourceManager* resource)
 {
+    if (m_mapData.empty() || resource == nullptr)
+        return;
+
     for (int y = 0; y < m_height; y++)
     {
         for (int x = 0; x < m_width; x++)
@@ -166,6 +173,23 @@ void Map::Render(HDC hdc, ResourceManager* resource)
             }
         }
     }
+}
+
+bool Map::IsWalkable(int x, int y)
+{
+    if (x < 0 || x >= m_width ||
+        y < 0 || y >= m_height)
+    {
+        return false;
+    }
+
+    // 벽이 없을 경우 true
+    if (m_mapData[y][x] == 0)
+    {
+        return true;
+    }
+
+    return false;
 }
 
 
