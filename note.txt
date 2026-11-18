@@ -252,3 +252,17 @@ void OpenColorPicker(HWND hWnd)
         g_SelectColor = COLOR.rgbResult;
         InvalidateRgn(hWnd, NULL, true);
     }
+	
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+2026-10-14 ~ 10-21
+비트맵 이미지 추가
+- 리소스 -> 추가 -> 비트맵 선택 -> 이미지 추가
+
+ HDC bitmaphdc = CreateCompatibleDC(hdc) // 이미지 비트맵용 hdc 가져오기
+ SelectObject()
+BitBlt() // 비트맵 그리기 함수
+strectchBit() // 비트맵 이지미 크기 조절 후 그리는 함수
+
+각 함수 파라미터 알기
+
+더블 버퍼링
