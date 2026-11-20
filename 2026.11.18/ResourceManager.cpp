@@ -1,6 +1,6 @@
 #include "ResourceManager.h"
 
-void ResourceManager::LoadImageFile(string name, const wchar_t* path)
+void ResourceManager::LoadImageFile(string name, const wchar_t* path, int frameSize)
 {
 	Bitmap* image = new Bitmap(path);
 
@@ -10,17 +10,21 @@ void ResourceManager::LoadImageFile(string name, const wchar_t* path)
 		return;
 	}
 
-	m_images[name] = image;
+	Resource* r = new Resource;
+	r->bitmap = image;
+	r->name = name;
+	r->frameSize = frameSize;
+
+	resource.push_back(r);
 }
 
-void ResourceManager::MakeFrame(int row, int col, int width, int height)
+void ResourceManager::DrawImage(int x, int y, int frameCount)
 {
-	for (int y = 0; y < row; y++)
-	{
-		for (int x = 0; x < col; x++)
-		{
-			Rect frame = { x, y, (x * width), (y * height) };
-			m_frames[y][x] = frame;
-		}
-	}
+
+
 }
+
+
+
+
+

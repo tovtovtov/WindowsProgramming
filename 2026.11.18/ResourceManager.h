@@ -11,25 +11,31 @@
 using namespace std;
 using namespace Gdiplus;
 
+struct Resource
+{
+	// 저장할 bitmap
+	Bitmap* bitmap;
+	// 이미지명
+	string name;
+	// 프레임 한칸의 크기 ex) 32 * 32
+	int frameSize;
+};
+
 class ResourceManager
 {
 public:
-	// 비트맵에 이미지 리소스 로드
-	void LoadImageFile(string name, const wchar_t* path);
+	// 리소스 로드
+	void LoadImageFile(string name, const wchar_t* path, int frameSize);
 
-	// 로드된 비트맵을 프레임별로 재단
-	void MakeFrame(int row, int col, int width, int height);
-
-	void DrawFrame(); // 작성 필요
-
+	// 로드된 이미지의 특정 부분 그리기
+	void DrawImage(int x, int y, int frameCount);
+	
 	void Release();
 
 private:
-	// 스프라이트 이미지 리소스 관리용 해시 테이블
-	unordered_map<string, Bitmap*> m_images;
 
-	// 행별로 프레임을 관리할 2차원 vector
-	vector<vector<Rect>> m_frames;
+	// bitmap 이미지 저장용 vector
+	vector<Resource*> resource;
 
 };
 
